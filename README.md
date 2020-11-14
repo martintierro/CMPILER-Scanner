@@ -1,1 +1,1 @@
-# ScannerPS
+# Scanner Problem Set
