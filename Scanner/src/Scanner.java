@@ -11,8 +11,9 @@ public class Scanner {
         }
         ArrayList<Token> tokenList = new ArrayList<>();
         for (String w: words) {
-
-            tokenList.add(new Token(w));
+            if(!w.equals("")){
+                tokenList.add(new Token(w));
+            }
         }
         return tokenList;
     }

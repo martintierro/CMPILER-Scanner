@@ -11,10 +11,8 @@ public class Main {
         while((line = bufferedReader.readLine()) != null){
             ArrayList<Token> tokens = sc.process(line);
             for(Token token: tokens){
-                System.out.print(token +" ");
                 fileWriter.write(token +" ");
             }
-            System.out.print("\n");
             fileWriter.write("\n");
         }
         inputStream.close();
