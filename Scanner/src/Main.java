@@ -8,13 +8,16 @@ public class Main {
         FileWriter fileWriter = new FileWriter("Scanner/IO/output.txt");
         String line;
         Scanner sc = new Scanner();
+        String output = "";
         while((line = bufferedReader.readLine()) != null){
             ArrayList<Token> tokens = sc.process(line);
             for(Token token: tokens){
-                fileWriter.write(token +" ");
+                output += token + " ";
             }
-            fileWriter.write("\n");
+            output += "\n";
         }
+        output = output.trim();
+        fileWriter.write(output);
         inputStream.close();
         fileWriter.close();
     }
