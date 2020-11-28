@@ -19,7 +19,7 @@ Step 3:
 
 Step 4:
 - 
-- Main class can be found in '**Scanner > src > **Main.java**'
+- Main class can be found in '**Scanner > src > Main.java**'
 - Ensure the IDE is setup to run using the main function.
 - Enter the run/debug button on your IDE to run the program 
 
