@@ -18,6 +18,8 @@ public class Token {
     private static final int s15 = 15;
     private static final int s16 = 16;
     private static final int s17 = 17;
+    private static final int s18 = 18;
+    private static final int s19 = 19;
     private static final int dead = -1;
     private static int state = s0;
 
@@ -59,10 +61,16 @@ public class Token {
             case s13:{
                 return TokenType.FPR;
             }
-            case s16:{
-                return  TokenType.GPR;
+            case s14:{
+                return TokenType.FPR;
             }
-            case s17:{
+            case s16:{
+                return TokenType.GPR;
+            }
+            case s18:{
+                return TokenType.GPR;
+            }
+            case s19:{
                 return TokenType.GPR;
             }
             default:{
@@ -77,7 +85,7 @@ public class Token {
                 case 'D': return s1;
                 case 'R': return s15;
                 case 'F': return s11;
-                case '$': return s14;
+                case '$': return s15;
                 default: return dead;
             }
             case s1: switch (input) {
@@ -123,8 +131,8 @@ public class Token {
             }
             case s11: switch (input) {
                 case '0': return s13;
-                case '1': return s12;
-                case '2': return s12;
+                case '1': return s14;
+                case '2': return s14;
                 case '3': return s12;
                 case '4': return s13;
                 case '5': return s13;
@@ -142,39 +150,68 @@ public class Token {
             case s13: switch (input) {
                 default: return dead;
             }
-            case s14: switch (input) {
-                case 'F': return s11;
-                case '0': return s17;
-                case '1': return s16;
-                case '2': return s16;
-                case '3': return s16;
-                case '4': return s17;
-                case '5': return s17;
-                case '6': return s17;
-                case '7': return s17;
-                case '8': return s17;
-                case '9': return s17;
+
+            case s14: switch (input){
+                case '0': return s13;
+                case '1': return s13;
+                case '2': return s13;
+                case '3': return s13;
+                case '4': return s13;
+                case '5': return s13;
+                case '6': return s13;
+                case '7': return s13;
+                case '8': return s13;
+                case '9': return s13;
                 default: return dead;
             }
+
             case s15: switch (input) {
-                case '0': return s17;
+                case 'F': return s11;
+                case '0': return s19;
                 case '1': return s16;
                 case '2': return s16;
-                case '3': return s16;
-                case '4': return s17;
-                case '5': return s17;
-                case '6': return s17;
-                case '7': return s17;
-                case '8': return s17;
-                case '9': return s17;
+                case '3': return s18;
+                case '4': return s19;
+                case '5': return s19;
+                case '6': return s19;
+                case '7': return s19;
+                case '8': return s19;
+                case '9': return s19;
                 default: return dead;
             }
             case s16: switch (input) {
-                case '0': return s17;
-                case '1': return s17;
+                case '0': return s19;
+                case '1': return s19;
+                case '2': return s19;
+                case '3': return s19;
+                case '4': return s19;
+                case '5': return s19;
+                case '6': return s19;
+                case '7': return s19;
+                case '8': return s19;
+                case '9': return s19;
                 default: return dead;
             }
             case s17: switch (input) {
+                case '0': return s19;
+                case '1': return s16;
+                case '2': return s16;
+                case '3': return s18;
+                case '4': return s19;
+                case '5': return s19;
+                case '6': return s19;
+                case '7': return s19;
+                case '8': return s19;
+                case '9': return s19;
+                default: return dead;
+            }
+            case s18: switch (input) {
+                case '0': return s19;
+                case '1': return s19;
+                default: return dead;
+            }
+
+            case s19: switch (input) {
                 default: return dead;
             }
             default: return dead;
